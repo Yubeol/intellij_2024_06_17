@@ -1,0 +1,22 @@
+package org.exmaple2;
+
+
+
+public class Main_2 {
+    public static void main(String [] args){
+        boolean rs = Math.isEvenNumber(2);
+        System.out.println(rs);
+        //ture
+        rs =  Math.isEvenNumber(3);
+        System.out.println(rs);
+        //false
+        rs = Math.isEvenNumber(5);
+        System.out.println(rs);
+        //false
+    }
+}
+class Math{
+    static boolean isEvenNumber(int i){ //짝수 판별기
+        return i % 2 == 0;
+    }
+}
