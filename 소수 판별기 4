@@ -1,0 +1,40 @@
+package com.ki;
+
+//문제 : 1부터 n까지 소수의 갯수를 출력하는 함수를 만들어주세요.
+public class Main {
+    public static void main(String[] args) {
+        int rs = Math.one_to_n_prime_numbers_count(10);
+        System.out.println("rs : " + rs);
+        //rs : 4
+        rs = Math.one_to_n_prime_numbers_count(13);
+        System.out.println(" rs :" + rs);
+        //rs : 6
+    }
+
+
+}
+
+class Math {
+    static int one_to_n_prime_numbers_count(int n) {//소수 판별기 소수 == 나와 나 자신 이외에 나누어 떨어지는 약수가 없는것
+        int count = 0;
+        for (int i = 1; i <= n; i++) {
+            if (isPrimNumber(i)) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+
+    static boolean isPrimNumber(int num) {
+        if (num == 1) {
+            return false;
+        }
+        for (int i = 2; i < num; i++) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
