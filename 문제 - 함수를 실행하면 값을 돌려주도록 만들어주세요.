@@ -30,17 +30,14 @@ public class Main {
 
 class 계산기 {
     static int 합(int i, int j) {
-        System.out.println(i + j);
-        return (i + j);
+        return i + j;
     }
 
     static int 차(int i, int j) {
-        System.out.println(i - j);
-        return (i - j);
+        return i - j;
     }
 
     static int 곱(int i, int j) {
-        System.out.println(i * j);
-        return (i * j);
+        return i * j;
     }
 }
