@@ -11,14 +11,14 @@ public class Main {
         String msg = greet("Jin"); // 매개변수 안에 문장을 넣는다
         System.out.println(msg); // msg 문장을 출력
 
-        Point point = creatPoint(5, 10); //point라는 변수에 x와y값을 넣어준다
-        System.out.println("Point creat at( " + point.x + ", " + point.y + ")");
+        Point point = creatPoint(5, 10); //point라는 매개변수에 x와y값을 넣어준다
+        System.out.println("Point creat at( " + point.x + ", " + point.y + ")");// 매개병수를 불러와 출력한다
 
         int[] evens = firstNEvenNumbers(5); //변수안에 값을 넣어준다
-        System.out.println("first 5 even numbers : " + Arrays.toString(evens));
+        System.out.println("first 5 even numbers : " + Arrays.toString(evens));//길이가 5인 배열을(를) 출력해 준다
     }
 
-    public static String greet(String name) {
+    public static String greet(String name) {// 메서드를 생성
         return "Hello, " + name + "!"; // 문장을 출력
     }
 
@@ -27,11 +27,11 @@ public class Main {
     }
 
     public static int[] firstNEvenNumbers(int n) {
-        int[] evenNumbers = new int[n];
+        int[] evenNumbers = new int[n];// 길이가 N인 배열의 변수를 생성한다
         for (int i = 0, num = 2; i < n; num += 2) { // 반복문을 사용하여 i는 0부터 숫자 2보다 크거나 같을때까지 반복한다
             evenNumbers[i] = num;
         }
-        return evenNumbers; // 짝수를 출력
+        return evenNumbers; // 길이가 n인 정수를 출력
     }
 
 }
