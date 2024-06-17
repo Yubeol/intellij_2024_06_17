@@ -28,7 +28,7 @@ public class Main {
 
     public static int[] firstNEvenNumbers(int n) {
         int[] evenNumbers = new int[n];// 길이가 N인 배열의 변수를 생성한다
-        for (int i = 0, num = 2; i < n; num += 2) { // 반복문을 사용하여 i는 0부터 숫자 2보다 크거나 같을때까지 반복한다
+        for (int i = 0, num = 2; i < n; i++, num += 2) { // 반복문을 사용하여 앞의 변수에 2라는 값을 더해준다 i가 0이면 num = 2씩 n번 더한다
             evenNumbers[i] = num;
         }
         return evenNumbers; // 길이가 n인 정수를 출력
