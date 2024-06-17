@@ -1,0 +1,31 @@
+package com.ki;
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
+
+//문제 : 1부터 n까지 소수의 갯수를 출력하는 함수를 만들어주세요.
+public class Main {
+    public static void main(String[] args) {
+       int rs = one_to_n_prime_numbers_count(10);
+        System.out.println("rs : " + rs);
+        //rs : 4
+        rs = one_to_n_prime_numbers_count(13);
+        System.out.println(" rs :" + rs);
+        //rs : 6
+    }
+}
+
+class Math {
+    static boolean one_to_n_prime_numbers_count(int num) {//소수 판별기 소수 == 나와 나 자신 이외에 나누어 떨어지는 약수가 없는것
+        if (num == 1) {
+            return false;
+        }
+        int sum = 0;
+        for (int i = 1; i <= num; i++) {
+            if (num % i == 0) {
+                sum += i;
+            }
+        }
+        return sum == num +1;
+    }
+}
