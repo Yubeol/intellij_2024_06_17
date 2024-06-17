@@ -1,0 +1,28 @@
+package com.ki;
+
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+public class Main {
+    public static void main(String[] args) {
+        // 문제 : 아래와 같이 출력 되도록 해주세요.
+
+        int 결과1 = Math.nToMSum(2, 3);
+        System.out.println("결과1 : " + 결과1);
+        // 출력 : 결과1 : 5
+
+        int 결과2 = Math.nToMSum(5, 10);
+        System.out.println("결과2 : " + 결과2);
+        // 출력 : 결과2 : 45
+    }
+}
+
+class Math {
+    static int nToMSum(int n, int m) {
+        int sum = 0;
+        for (int i = n; i <= m; i++) {
+            sum += i;
+        }
+        return sum;
+    }
+}
+
