@@ -30,7 +30,12 @@ class Math {
         // return => 변신
         return c;
     }
-    static int oneToSum(3){
-        
+
+    static int oneToSum(int n){
+        int sum = 0;
+        for (int i = 1; i <= n; i++){
+            sum += i;
+        }
+        return sum;
     }
 }
